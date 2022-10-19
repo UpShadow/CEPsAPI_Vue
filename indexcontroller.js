@@ -16,7 +16,7 @@ const vcep = {
             .get('https://servicodados.ibge.gov.br/api/v1/localidades/estados/'+ estado + '/municipios')
             .then(response => {
                 this.cidades = response.data;
-                this.cidade = this.cidades[0].nome;
+                this.cidade = this.cidades[464].nome;
             })
         },
         carregaCep() {
@@ -32,7 +32,7 @@ const vcep = {
             .get('https://servicodados.ibge.gov.br/api/v1/localidades/estados')
             .then(response => { 
                 this.estados = response.data
-                this.estado = this.estados[0].sigla
+                this.estado = this.estados[19].sigla
                 this.pegaCidade(this.estado)
             }) 
 
